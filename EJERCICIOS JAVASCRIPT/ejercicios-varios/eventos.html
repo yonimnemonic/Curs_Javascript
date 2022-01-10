@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+</head>
+<body>
+    <button id="boton">Cambiar background</button>
+    <script>
+        function random(numeroMaximo) {  
+            return Math.round(Math.random() * numeroMaximo);
+        }
+
+        let boton = document.getElementById('boton');
+        boton.addEventListener('click', (evento)=>{
+            console.log(evento)
+            let randomColor = [
+            random(255),
+            random(255),
+            random(255),
+        ];
+            // console.log("se cambia el fondo del body")
+            document.body.style.backgroundColor = `rgb(${randomColor[0]}, ${randomColor[1]}, ${randomColor[2]})`
+        })
+        document.addEventListener('cambiarFondo', (evento)=>{
+            console.log(evento)
+        })
+
+        var event = new CustomEvent('cambiarFondo', {'detail': 'Hola Jhon Salchichon'});
+        document.dispatchEvent(event)
+    </script>
+    
+</body>
+</html>

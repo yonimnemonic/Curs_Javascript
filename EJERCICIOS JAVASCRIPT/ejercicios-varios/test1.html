@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="todo_list">
+    </ul>
+    <p>Mi Primera clase practica de DOM</p>
+    <script>
+        var parrafo = document.getElementsByTagName('p')
+
+        parrafo[0].style.color ='blue'
+        parrafo[0].style.backgroundColor ='yellow'
+        // parrafo[0].innerText='que pasa enen al fnal'
+        // parrafo[0].innerHTML='yeeeaaa'
+
+        var tareasTodo = document.querySelector('#todo_list')
+        var tareas =[
+            'Hacer la colada',
+            'Preparar la cena',
+            'Tirar la basura',
+        ];
+
+        for (let i = 0; i < tareas.length; i++) {
+            var tar = tareas[i];
+
+            var li = document.createElement('li');
+            li.textContent = tar;
+            tareasTodo.appendChild(li);
+            li.id = 'Elemento_' + i
+        }
+        var elementoAliminar = document.getElementById('Elemento_2')
+
+        setTimeout(() => {
+            tareasTodo.removeChild(elementoAliminar)
+        }, 3000);
+        
+
+        console.log(tareasTodo)
+
+
+
+    </script>
+    
+</body>
+</html>

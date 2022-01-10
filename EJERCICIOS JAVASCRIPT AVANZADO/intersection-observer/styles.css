@@ -1,0 +1,31 @@
+body{
+    color: #222;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.caja{
+    height: 200px;
+    width: 200px;
+    display: flex;
+    background:#48e;
+    color: wheat;
+    border: 2px dashed white;
+    margin: 10px;
+}
+.caja span{
+    margin: auto;
+}
+.caja:nth-child(2){
+    background: #e48;
+    border: 4px dashed #824;
+}
+.caja:nth-child(3){
+    background: #48e;
+    border: 4px dashed #284;
+}
+.caja:nth-child(4){
+    background: #666;
+    border: 4px dashed #444;
+}
+

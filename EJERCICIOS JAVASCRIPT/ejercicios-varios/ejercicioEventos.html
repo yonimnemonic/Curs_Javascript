@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio eventos</title>
+</head>
+    <ul id="lista">
+
+    </ul>
+    <input id="input" type="text" placeholder="Introduce un elemento"><br>
+    <button id="boton">actualizar</button>
+<body>
+    <script>
+        boton.addEventListener('click' ,()=> {
+            let boton = document.getElementById("boton");
+            let lista = document.getElementById("lista");
+            let input = document.getElementById("input");            
+
+            let contenidoInput = input.value;
+            console.log(contenidoInput);
+
+            var li = document.createElement('li');
+            li.textContent = contenidoInput;
+            lista.appendChild(li);
+        })
+
+    </script>  
+</body>
+</html>
